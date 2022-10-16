@@ -1,5 +1,6 @@
 import Garagem from "./Componentes/Garagem";
 import "./styles.css";
+import { GlobalStyled } from "./GlobalStyled";
 
 export default function App() {
   const nome = "Amma";
@@ -9,6 +10,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <GlobalStyled />
       <Garagem nome={nome} mensagemAprentacao={apresentaGaragem} />
     </div>
   );
