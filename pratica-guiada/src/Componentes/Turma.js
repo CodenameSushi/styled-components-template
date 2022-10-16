@@ -1,11 +1,27 @@
 import Estudante from "./Estudante";
+import styled from "styled-components";
+
+const ButtonApresenta = styled.button`
+  background-color: orangered;
+  border: 1px solid white;
+  margin: 10px;
+  padding: 12px;
+`
+
+const TurmaContainer = styled.div`
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 function Turma(props) {
   return (
     <div>
+      <TurmaContainer>
       <h1>Turma {props.turma}</h1>
       <h4>Responsável:{props.responsavel}</h4>
-      <button onClick={props.apresentar}>Apresentar</button>
+      <ButtonApresenta onClick={props.apresentar}>Apresentar</ButtonApresenta>
 
       <Estudante
         nome={"Clarinha"}
@@ -31,6 +47,7 @@ function Turma(props) {
         corDaRoupa={"amarelo"}
         criadoPor={props.responsavel}
       />
+      </TurmaContainer>
     </div>
   );
 }
